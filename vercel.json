@@ -1,11 +1,4 @@
 {
-  "routes": [
-    {
-      "src": "/[^.]+",
-      "dest": "/",
-      "status": 200
-    }
-  ],
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
@@ -13,6 +6,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://book-management-backend-irsm.vercel.app/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
