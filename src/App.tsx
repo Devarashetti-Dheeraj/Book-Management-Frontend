@@ -15,7 +15,7 @@ export default function App() {
   const fetchBooks = async () => {
     try {
                   //api fetching with type interface
-      const res = await API.get<{ data: Book[] }>("/getAllBooks");
+      const res = await API.get<{data: Book[]}>("/getAllBooks");
       setBooks(res.data.data);
     } catch (err) {
       console.error(err);
