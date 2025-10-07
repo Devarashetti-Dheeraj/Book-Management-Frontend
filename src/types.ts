@@ -16,3 +16,13 @@ export interface Book {
   //Date when the book was published (stored as a string, usually ISO format: YYYY-MM-DD)
   publishedDate: string;
 }
+
+// Interface to define the structure of the API response
+export interface ApiResponse {
+  user: {
+    id: string;
+    role: string;
+  };
+  token: string;
+  message?: string;
+}
